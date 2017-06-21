@@ -16,7 +16,7 @@ app.get('/', function(req, res){
 	})
 })
 
-app.get('/post', function (req, res, next) {
+app.get('https://blog-profile.herokuapp.com/post', function (req, res, next) {
 	pg.connect(conString, function (err, client, done){
     if (err){
       return next(err)
@@ -31,7 +31,7 @@ app.get('/post', function (req, res, next) {
   })
 })
 
-app.post('/post',function(req,res,next){
+app.post('https://blog-profile.herokuapp.com/post',function(req,res,next){
   const blogPost = req.body
   pg.connect(conString, function (err, client, done){
     if (err){
@@ -42,7 +42,7 @@ app.post('/post',function(req,res,next){
       if (err){
         return next(err)
       }
-      res.redirect('/post')
+      res.redirect('https://blog-profile.herokuapp.com/post')
     })
   })
 })
