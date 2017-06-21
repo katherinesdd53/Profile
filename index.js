@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 const bodyParser = require('body-parser');
 const pg = require('pg');
-const conString = 'postgres://postgres@localhost/postgres';
+const conString = 'postgres://postgres@db:5432/postgres';
 
 app.set('views', __dirname + '/views');
 app.set('view engine','ejs');
